@@ -16,7 +16,7 @@ pullRequest() {
                 "name": "perseusbranch"
             },
             "repository": {
-                "full_name": "anycorp/$repo"
+                "full_name": "anycorp/'$repo'"
             }
         },
         "destination": {
