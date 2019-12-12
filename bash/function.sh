@@ -26,7 +26,7 @@ pullRequest() {
         },
         "reviewers": [ { "username": "tanopwan_won" } ],
         "close_source_branch": true
-    }'
+    }' | jq '.links.html.href'
 }
 
 connectToEC2 10.230.18.166
