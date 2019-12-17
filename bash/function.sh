@@ -2,6 +2,13 @@ connectToEC2() {
     ssh -i ~/.ssh/keypair.pem "centos@$1"
 }
 
+version() {
+    declare -A services=(
+        ["service1"]="http://service1.com"
+    )
+    "curl -s ${services[$1]}/info | jq '.build.name + .build.version'"
+}
+
 pullRequest() {
     repo=${PWD##*/}
     curl -X POST \
