@@ -1,5 +1,5 @@
 connectToEC2() {
-    ssh -i ~/.ssh/tmn-th-nonprod-keypair.pem "centos@$1"
+    ssh -i ~/.ssh/keypair.pem "centos@$1"
 }
 
 pullRequest() {
